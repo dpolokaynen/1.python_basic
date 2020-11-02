@@ -3,9 +3,9 @@
 вводимые пользователем. Об окончании ввода данных свидетельствует пустая строка.
 '''
 
-with open( "new_file.txt" , 'w' ) as new_file:
-    q=0
-    while q:
-        print(input())
+with open("task_1.txt", 'w') as new_file:
+    while True:
+        data = input()
+        print(data, file=new_file)
         if input() == '':
-           q = 0
+            break

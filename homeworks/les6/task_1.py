@@ -7,32 +7,17 @@
 указанном порядке (красный, желтый, зеленый). Проверить работу примера, создав экземпляр
 и вызвав описанный метод.
 '''
-import time
-import itertools
+
+from time import sleep
 
 class TrafficLight:
-    __color = 'red'
-    __running = 7
-    def traffic_change (self, __color, __running):
-        if __color == 'red':
-            self.__color = 'yellow'
-            self.__running = 2
-            print(__color)
-            time.sleep(__running)
-        elif __color == 'yellow':
-            self.__color = 'green'
-            self.__running = 4
-            print(__color)
-            time.sleep(__running)
-        elif __color == 'green':
-            self.__color = 'red'
-            self.__running = 7
-            print(__color)
-            time.sleep(__running)
+    __color = {'red': 7, 'yellow': 2, 'green': 5}
 
+    def running(self):
+        while True:
+            for key in TrafficLight.__color:
+                print(key)
+                sleep(TrafficLight.__color.get(key))
 
-
-test_traffic = TrafficLight()
-test_traffic.traffic_change()
-print(tr)
-
+t = TrafficLight()
+t.running()

@@ -1,1 +1,1 @@
-# 1.python_basic
+# Домашние работы по курсу Python из специализации Data Science, GeekBrains
